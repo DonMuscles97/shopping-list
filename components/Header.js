@@ -9,7 +9,9 @@ const Header = ({title}) => {
     )
 }
 
-export default Header
+Header.defaultProps = {
+    title: 'Header'
+}
 
 const styles = StyleSheet.create({
     header: {
@@ -24,3 +26,9 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     }    
 })
+
+export default Header
+
+
+
+
