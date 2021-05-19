@@ -2,14 +2,13 @@ import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import {FontAwesome} from '@expo/vector-icons'
 
-const ListItem = ({item}) => {
+const ListItem = ({item, deleteItem}) => {
     return (
         <TouchableOpacity style={styles.listItem}>
             <View style={styles.listItemView}>
-                <Text style={styles.listItemText}>
-                    {item.text}
-                    <FontAwesome name="remove" size={20} color="crimson"/>
-                </Text>
+                <Text style={styles.listItemText}>{item.text}</Text>
+                <FontAwesome name="remove" size={20} color="crimson" 
+                onPress={() => deleteItem(item.id)}/>
             </View>
         </TouchableOpacity>
     )
